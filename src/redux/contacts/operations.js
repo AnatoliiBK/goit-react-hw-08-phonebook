@@ -73,7 +73,7 @@ export const deleteContact = createAsyncThunk(
   
   async (contactId, thunkAPI) => {
     try {
-      const response = await axios.delete(`https://connections-api.herokuapp.com/contacts/{contactId}${contactId}`);
+      const response = await axios.delete(`https://connections-api.herokuapp.com/contacts/${contactId}`);
       console.log("DELL", response.data.id, contactId);
       return response.data.id;
       
