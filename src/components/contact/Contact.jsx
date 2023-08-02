@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import axios from 'axios';
+// import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'components/redux/contactsSlice';
+import { deleteContact } from 'redux/contacts/operations';
 import { nameStyle, name, btnDelStyle } from 'components/styles';
 
 export const ContactItem = ({ contact }) => {
@@ -9,7 +9,7 @@ export const ContactItem = ({ contact }) => {
 
   const handleDelete = async () => {
     try {      
-      await axios.get(`https://64b3a5a00efb99d862683852.mockapi.io/contacts/${contact.id}`);     
+      // await axios.get(`https://connections-api.herokuapp.com/contacts/${contact.id}`);     
       dispatch(deleteContact(contact.id));
       console.log("ВИДАЛЕННЯ", contact, contact.id )
     } catch (error) {
