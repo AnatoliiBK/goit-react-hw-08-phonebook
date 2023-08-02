@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchContacts, deleteContact } from "../redux/contactsSlice"
+import { fetchContacts, deleteContact } from "../../redux/contacts/operations";
 import { Filter } from "components/Filter";
 import { ContactItem } from "./Contact";
 // import axios from 'axios';
