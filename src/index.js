@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { AppF } from 'components/AppF';
+import { App } from 'components/App';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
-          <AppF />
+          <App />
         </BrowserRouter>
       </PersistGate>
     </Provider>
@@ -28,7 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 // import { Provider } from 'react-redux';
 
 // import { store } from "./components/redux/store";
-// import { AppF } from 'components/AppF';
+// import { App } from 'components/App';
 // import './index.css';
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
