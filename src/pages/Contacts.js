@@ -17,9 +17,9 @@ export default function Contacts() {
   return (
     <>
       <HelmetProvider>
-      <Helmet>
-        <title>Your contacts</title>
-      </Helmet>
+        <Helmet>
+          <title>Your contacts</title>
+        </Helmet>
       </HelmetProvider>
       <ContactForm />
       <div>{isLoading && 'Request in progress...'}</div>
