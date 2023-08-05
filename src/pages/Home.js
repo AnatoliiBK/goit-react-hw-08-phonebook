@@ -18,7 +18,7 @@ const styles = {
         <h1 style={styles.title}>
           PhoneBook Welcome Page{' '}
           <span role="img" aria-label="Greeting icon">
-            💁‍♀️
+          &#128214;
           </span>
         </h1>
       </div>

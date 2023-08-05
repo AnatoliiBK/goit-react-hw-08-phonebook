@@ -8,8 +8,8 @@ import { listStyle, list } from "components/styles";
 
 export const ContactList = () => {
   
-  const contacts = useSelector((state) => state.contacts.items);
-  const filter = useSelector((state) => state.filter);
+  const contacts = useSelector((state) => state.contactsUser.contacts.items);
+  const filter = useSelector((state) => state.contactsUser.filter);
   
   const dispatch = useDispatch();
 
@@ -20,7 +20,7 @@ export const ContactList = () => {
   // const filteredContacts = contacts.filter((contact) =>
   //   contact.name.toLowerCase().includes(filter.toLowerCase())
   // );
-  // перевіряємо, чи є contacts масивом
+  // перевірити, чи є contacts масивом
   const filteredContacts = Array.isArray(contacts)
     ? contacts.filter((contact) =>
         contact.name.toLowerCase().includes(filter.toLowerCase())

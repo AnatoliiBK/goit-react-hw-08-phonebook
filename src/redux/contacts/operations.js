@@ -34,10 +34,10 @@ export const addContact = createAsyncThunk(
 
     const state = getState();
     
-    const existingNumberContact = state.contacts.items.find(
+    const existingNumberContact = state.contactsUser.contacts.items.find(
       (contact) => contact.number === newContact.number
     );
-    const existingNameContact = state.contacts.items.find(
+    const existingNameContact = state.contactsUser.contacts.items.find(
       (contact) => contact.name === newContact.name
     );
 
