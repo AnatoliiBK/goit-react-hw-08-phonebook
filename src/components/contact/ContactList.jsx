@@ -17,9 +17,15 @@ export const ContactList = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-  const filteredContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
-  );
+  // const filteredContacts = contacts.filter((contact) =>
+  //   contact.name.toLowerCase().includes(filter.toLowerCase())
+  // );
+  // перевіряємо, чи є contacts масивом
+  const filteredContacts = Array.isArray(contacts)
+    ? contacts.filter((contact) =>
+        contact.name.toLowerCase().includes(filter.toLowerCase())
+      )
+    : [];
 
   const handleChange = async (contactId) => {
     try {

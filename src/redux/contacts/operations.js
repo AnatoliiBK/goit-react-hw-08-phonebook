@@ -33,14 +33,7 @@ export const addContact = createAsyncThunk(
     newContact.number = phoneNumber.formatInternational();
 
     const state = getState();
-    // const existingContact = state.contacts.items.find(
-    //   (contact) => contact.number === newContact.number
-    //   // (contact) => contact.number === newContact.number && contact.name === newContact.name
-    // );
-    // if (existingContact) {
-    //   alert(`Contact with phone number ${newContact.number} already exists.`);
-    //   throw new Error(`Contact with phone number ${newContact.number} already exists.`);
-    // }    
+    
     const existingNumberContact = state.contacts.items.find(
       (contact) => contact.number === newContact.number
     );
